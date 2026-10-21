@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUILD SHAPES ARCHITECTS - Chennai Based Architecture Firm</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#fff;overflow-x:hidden}
+:root{--orange:#FF9B2E;--black:#101010}
+.topbar{height:3px;background:var(--orange)}
+.header{background:var(--black);display:flex;justify-content:space-between;align-items:center;padding:8px 6%;border-bottom:1.5px solid var(--orange);position:sticky;top:0;z-index:999}
+.logo-wrap{display:flex;align-items:center;gap:14px}
+.logo-wrap img{width:58px;height:72px;object-fit:contain}
+.logo-text{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;color:#fff;line-height:0.95}
+.logo-text span{color:var(--orange)}
+.menu{display:flex;gap:14px;align-items:center;font-size:13.5px;color:#fff}
+.menu a{color:#fff;text-decoration:none;opacity:0.9}
+.btn-orange{background:var(--orange);color:#000!important;padding:10px 24px;border-radius:6px;font-weight:700;font-family:'Montserrat',sans-serif;font-size:13px;text-decoration:none;display:inline-block}
+
+/* HERO */
+.hero{background:var(--black);display:grid;grid-template-columns:1.05fr 0.95fr;min-height:360px;position:relative;overflow:hidden}
+.hero-left{padding:38px 6% 30px 6%;position:relative;z-index:2}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:800;color:#fff;line-height:1.15}
+.hero-left h1 .orange{color:var(--orange)}
+.hero-left .firm{margin-top:10px;color:#fff;font-weight:600;font-size:13px}
+.hero-left .desc{margin-top:8px;color:#a5a5a5;font-size:10.8px;line-height:1.6;max-width:520px}
+.tri-orange-left{position:absolute;left:0;bottom:0;width:0;height:0;border-left:90px solid var(--orange);border-top:90px solid transparent}
+.tri-orange-right-top{position:absolute;right:39%;top:0;width:0;height:0;border-right:110px solid var(--orange);border-bottom:110px solid transparent;transform:rotate(180deg)}
+.tri-orange-right-bottom{position:absolute;right:39%;bottom:0;width:0;height:0;border-right:110px solid var(--orange);border-top:110px solid transparent}
+.hero-right{position:relative;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+.hero-right img{width:100%;height:100%;object-fit:cover}
+
+/* WHAT WE DO */
+.what{padding:22px 6% 26px;background:#f5f5f5;text-align:center}
+.what h2{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:#1a1a1a}
+.what h2:after{content:'';display:block;width:46px;height:2px;background:var(--orange);margin:5px auto 18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1050px;margin:0 auto}
+.card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.08);border:1px solid #eee}
+.card-top{background:var(--black);height:72px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.card p{padding:12px 14px;font-size:10.5px;line-height:1.5;color:#222;text-align:center}
+
+/* FEATURED */
+.featured-bar{background:var(--black);text-align:center;padding:10px 6% 8px;border-top:1px solid #222;border-bottom:1px solid #222}
+.featured-bar h3{font-family:'Montserrat',sans-serif;font-size:16px;color:#fff;font-weight:800;letter-spacing:0.5px}
+.featured-bar p{color:var(--orange);font-size:12px;font-weight:600;margin-top:1px}
+
+/* ABOUT + PORTFOLIO */
+.about-port{background:#efefef;display:grid;grid-template-columns:210px 1fr;gap:18px;padding:16px 2.5%;align-items:start}
+.about-text h4{font-size:11px;font-weight:600;letter-spacing:0.5px}
+.about-text h3{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;margin:2px 0 6px}
+.about-text h3:after{content:'';display:block;width:36px;height:2px;background:var(--orange);margin-top:4px}
+.about-text .small{font-size:8.8px;line-height:1.55;color:#333;margin-top:8px}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.p-card{height:138px;border-radius:6px;overflow:hidden;background:#ddd;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
+.p-card img{width:100%;height:100%;object-fit:cover;transition:0.3s}
+.p-card:hover img{transform:scale(1.05)}
+
+/* FOOTER */
+.footer{background:var(--black);display:grid;grid-template-columns:1.3fr 0.7fr 1fr auto;gap:14px;padding:12px 3%;align-items:center;border-top:1px solid #222}
+.footer h4{color:var(--orange);font-size:11px;font-family:'Montserrat',sans-serif}
+.footer p{color:#8a8a8a;font-size:9.5px;line-height:1.5;margin-top:3px}
+.footer .contact-num{color:#fff;font-weight:600;font-size:11px}
+.copy{background:#0a0a0a;color:#6a6a6a;text-align:center;font-size:8.5px;padding:7px;border-top:1px solid var(--orange)}
+
+@media(max-width:900px){.menu{display:none}.hero{grid-template-columns:1fr}.hero-right{clip-path:none;height:300px}.tri-orange-right-top,.tri-orange-right-bottom{display:none}.cards{grid-template-columns:1fr;max-width:420px}.about-port{grid-template-columns:1fr}.port-grid{grid-template-columns:1fr 1fr}.footer{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero-left h1{font-size:22px}.port-grid{grid-template-columns:1fr}.p-card{height:200px}.footer{grid-template-columns:1fr;text-align:center}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="header">
+<div class="logo-wrap">
+<img src="logo.png" alt="Build Shapes Logo">
+<div class="logo-text">BUILD SHAPES<br><span>ARCHITECTS</span></div>
+</div>
+<nav class="menu">
+<a href="#">Home</a>|<a href="#portfolio">Portfolio</a>|<a href="#services">Services</a>|<a href="#about">About</a>|<a href="#contact">Contact</a>
+<a href="#contact" class="btn-orange">GET IN TOUCH</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-left">
+<div class="tri-orange-left"></div>
+<div class="tri-orange-right-top"></div>
+<div class="tri-orange-right-bottom"></div>
+<h1>ARCHITECTURE, PLANNING,<br><span class="orange">INTERIORS, EXECUTION</span></h1>
+<div class="firm">Ar. YUVASANKAR S — Chennai Based Architecture Firm</div>
+<div class="desc">We craft modern, sustainable, and elegant spaces that blend function with aesthetics. From residential to interiors, we design and execute with precision and innovation.</div>
+</div>
+<div class="hero-right">
+<img src="building0.jpg" alt="Hero Villa">
+</div>
+</section>
+
+<section class="what">
+<h2>WHAT WE DO</h2>
+<div class="cards">
+<div class="card"><div class="card-top">🏠</div><p>Innovative architectural design tailored to your vision, blending aesthetics and structural excellence.</p></div>
+<div class="card"><div class="card-top">📐</div><p>Comprehensive project planning and approvals, ensuring efficient design and regulatory compliance.</p></div>
+<div class="card"><div class="card-top">🛋️</div><p>End-to-end interior design and execution, delivering modern, functional spaces on time.</p></div>
+</div>
+</section>
+
+<div class="featured-bar">
+<h3>FEATURED PORTFOLIO</h3>
+<p>Modern Residential Projects in Chennai</p>
+</div>
+
+<section class="about-port" id="portfolio">
+<div class="about-text" id="about">
+<h4>ABOUT</h4>
+<h3>Ar. YUVASANKAR S</h3>
+<div class="small">
+<b>Principal Architect | BUILD SHAPES ARCHITECTS.</b><br><br>
+With a passion for modern design and sustainable architecture, Ar. YUVASANKAR S leads the firm to deliver innovative design solutions across Chennai. We focus on detail, quality, and bringing clients' dreams into reality through thoughtful planning and execution.
+</div>
+</div>
+<div class="port-grid">
+<div class="p-card"><img src="building1.jpg" alt="White Building"></div>
+<div class="p-card"><img src="building2.jpg" alt="Modern Villa"></div>
+<div class="p-card"><img src="building3.jpg" alt="Luxury Villa Pool"></div>
+<div class="p-card"><img src="building4.jpg" alt="Luxury Villa Pool"></div>
+<div class="p-card"><img src="building5.jpg" alt="Luxury Villa Pool"></div>
+<div class="p-card"><img src="building6.jpg" alt="Luxury Villa Pool"></div>
+</div>
+</section>
+
+<footer class="footer" id="contact">
+<div>
+<h4>BUILD SHAPES <span style="color:var(--orange)">ARCHITECTS</span></h4>
+<p>Chennai, Tamil Nadu | Architecture | Planning | Interiors | Execution</p>
+</div>
+<div>
+<h4>CONTACT</h4>
+<p class="contact-num">📞 9944459783</p>
+</div>
+<div>
+<p>✉ buildshapes.architects@gmail.com<br>📷 @buildshapes.architects</p>
+</div>
+<div>
+<a href="tel:9944459783" class="btn-orange">CONSULT NOW</a>
+</div>
+</footer>
+<div class="copy">© 2024 BUILD SHAPES ARCHITECTS. All Rights Reserved. | Designed with Precision in Chennai</div>
+</body>
+  </html>
